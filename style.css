@@ -206,6 +206,19 @@ a:hover {
   cursor: pointer;
 }
 
+.logo:hover::after {
+  background: #1e1e1f;
+  border-radius: 4px;
+  bottom: 100%;
+  content: attr(title);
+  display: block;
+  left: 100%;
+  padding: 1em;
+  position: absolute;
+  width: 280px;
+  z-index: 1;
+}
+
 nav {
   position: fixed;
   width: 100%;
@@ -364,6 +377,7 @@ nav {
 
 .nav-list.active {
   transform: translateX(0);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 12px;
 }
 
 @keyframes navLinkFade {
