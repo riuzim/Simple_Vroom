@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 @font-face {
-  font-family: 'myfont';
-  src: url('fonts/awesome-font.woff') format('woff');
+  font-family: 'Ginto-Nord';
+  src: url('fonts/Ginto-Nord-700.woff') format('woff');
 }
 
 * {
@@ -208,6 +208,7 @@ a:hover {
   letter-spacing: 4px;
   background: #121213;
   cursor: pointer;
+  font-family: 'Ginto-Nord';
 }
 
 .logo:hover::after {
