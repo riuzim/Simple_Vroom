@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #161e31;
+  background-color: #121213;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -26,9 +26,9 @@
 #container {
   position: relative;
   text-align: center;
-  border: solid 20px #2d3250;
+  border: solid 20px #1e1e1f;
   border-radius: 20px;
-  background-color: #2d3250;
+  background-color: #1e1e1f;
   width: 400px;
   height: 300px;
   overflow: hidden;
@@ -42,7 +42,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
-  background-color: #2d3250;
+  background-color: #1e1e1f;
 }
 
 #inputNome {
@@ -50,7 +50,7 @@
   font-size: 16px;
   border: none;
   border-radius: 4px;
-  background-color: #2d3250;
+  background-color: #1e1e1f;
   color: white;
   height: 40%;
 
@@ -59,7 +59,7 @@
 }
 
 #inputNome::placeholder {
-  color: #f9b17a70;
+  color: #5e5e5e;
 }
 
 #erro {
@@ -100,19 +100,21 @@
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 15px #f9b17a;
+  cursor: default;
 }
 
 .data-container-l {
   position: relative;
   text-align: center;
-  border: solid 10px #2d3250;
+  border: solid 10px #1e1e1f;
   border-radius: 20px;
-  background-color: #2d3250;
+  background-color: #1e1e1f;
   width: 16.5rem;
   height: 23.75rem;
   overflow: hidden;
   color: #f9b17a;
   font-weight: 500;
+  cursor: default;
 
   grid-column: 2;
   grid-row-start: 4;
@@ -126,14 +128,15 @@
 .data-container-r {
   position: relative;
   text-align: center;
-  border: solid 10px #2d3250;
+  border: solid 10px #1e1e1f;
   border-radius: 20px;
-  background-color: #2d3250;
+  background-color: #1e1e1f;
   width: 16.5rem;
   height: 23.75rem;
   overflow: hidden;
   color: #f9b17a;
   font-weight: 500;
+  cursor: default;
 
   grid-column: 4;
   grid-row-start: 4;
@@ -145,7 +148,7 @@
 }
 
 li {
-  background-color: #2d3250;
+  background-color: #1e1e1f;
   color: white;
 }
 
@@ -199,7 +202,7 @@ a:hover {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 4px;
-  background: #2d3250;
+  background: #121213;
   cursor: pointer;
 }
 
@@ -209,20 +212,21 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #2d3250;
+  background: #121213;
   height: 8vh;
+  border-bottom: solid 2px #63636363;
 }
 
 .nav-list {
   list-style: none;
   display: none;
-  background: #2d3250;
+  background: #121213;
 }
 
 .nav-list-normal {
   list-style: none;
   display: flex;
-  background: #2d3250;
+  background: #121213;
 }
 
 .nav-list li {
@@ -233,7 +237,7 @@ nav {
 }
 
 .icon::before {
-  background: #2d3250;
+  background: #121213;
 }
 
 .mobile-menu {
@@ -263,7 +267,7 @@ nav {
     right: 0;
     width: 50vw;
     height: 92vh;
-    background: #2d3250;
+    background: #121213;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -294,7 +298,7 @@ nav {
   }
   .mobile-menu {
     display: block;
-    background: #2d3250;
+    background: #121213;
   }
 
   .data-container-l {
@@ -308,7 +312,7 @@ nav {
   .data-container-r-mobile {
     text-align: center;
     border-radius: 20px;
-    background-color: #424769;
+    background-color: #1e1e1f;
     width: 16.5rem;
     height: 13.75rem;
     overflow: hidden;
@@ -324,7 +328,7 @@ nav {
   .data-container-l-mobile {
     text-align: center;
     border-radius: 20px;
-    background-color: #424769;
+    background-color: #1e1e1f;
     width: 16.5rem;
     height: 13.75rem;
     overflow: hidden;
@@ -338,11 +342,11 @@ nav {
   }
 
   .data-container-l-mobile li {
-    background-color: #424769;
+    background-color: #1e1e1f;
   }
 
   .data-container-r-mobile li {
-    background-color: #424769;
+    background-color: #1e1e1f;
   }
 
   #dicaBox {
@@ -350,7 +354,11 @@ nav {
   }
 
   .data-containerCont {
-    background-color: #424769;
+    background-color: #1e1e1f;
+  }
+
+  li {
+    background-color: #121213;
   }
 }
 
@@ -401,7 +409,7 @@ nav {
 
 .settings {
   z-index: 101;
-  background-color: #424769;
+  background-color: #121213;
   width: 50%;
   height: 50%;
   border-radius: 20px;
@@ -416,7 +424,7 @@ nav {
 .close {
   color: #fff;
   font-size: 2rem;
-  background-color: #424769;
+  background-color: #121213;
   position: relative;
   left: 100%;
   margin-left: -3rem;
@@ -426,7 +434,7 @@ nav {
 }
 
 .settingsContent {
-  background-color: #424769;
+  background-color: #121213;
 }
 
 .settingsTitle {
@@ -444,7 +452,7 @@ nav {
 .feedback,
 .email {
   color: #fff;
-  background-color: #424769;
+  background-color: #121213;
   display: flex;
   justify-content: space-between;
   margin: 10px 1rem 0.5rem 1rem;
@@ -453,7 +461,7 @@ nav {
 }
 
 .feedback {
-  border-bottom: 2px solid #2d3250;
+  border-bottom: 2px solid #63636363;
 }
 
 .email {
