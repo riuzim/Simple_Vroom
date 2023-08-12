@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@font-face {
+  font-family: 'myfont';
+  src: url('fonts/awesome-font.woff') format('woff');
+}
 
 * {
   box-sizing: border-box;
@@ -187,7 +191,7 @@ li {
     rgba(249, 177, 122, 0.938) 0px 0px 8px;
 }
 
-/*--------------------Header--------------------*/
+/*Header*/
 a {
   color: #fff;
   text-decoration: none;
@@ -207,16 +211,16 @@ a:hover {
 }
 
 .logo:hover::after {
-  background: #1e1e1f;
-  border-radius: 4px;
-  bottom: 100%;
   content: attr(title);
+  position: absolute;
   display: block;
   left: 100%;
   padding: 1em;
-  position: absolute;
   width: 280px;
   z-index: 1;
+  background-color: #1e1e1f !important;
+  border-radius: 4px;
+  bottom: 100%;
 }
 
 nav {
@@ -464,7 +468,8 @@ nav {
 }
 
 .feedback,
-.email {
+.email,
+.link {
   color: #fff;
   background-color: #121213;
   display: flex;
@@ -478,10 +483,15 @@ nav {
   border-bottom: 2px solid #63636363;
 }
 
-.email {
+.email,
+.link {
   margin-top: 0;
   margin-right: 0;
   cursor: pointer;
 
   color: rgba(255, 255, 255, 0.616);
+}
+
+.linkFeed {
+  transform: translateY(720%);
 }
