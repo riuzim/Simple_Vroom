@@ -234,11 +234,3 @@ exibirImagemAleatoria();
 // Inicializar a lista de últimos scores no carregamento da página
 atualizarMelhorScore();
 atualizarUltimosScores();
-
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-  // true for mobile device
-  alert("Não é compativel com celulares ainda!")
-}else{
-  // false for not mobile device
-  document.write("not mobile device");
-}
