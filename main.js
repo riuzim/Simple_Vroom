@@ -15,7 +15,7 @@ const imagens = [
   { nome: 'Toyota Camry', url: 'https://i.imgur.com/BCCNQId.jpg' },
   { nome: 'Mercedes-Benz E-Class', url: 'https://i.imgur.com/xn0C8H0.jpg' },
   { nome: 'Audi A4', url: 'https://i.imgur.com/gQwSa3U.jpg' },
-  { nome: 'Volkswagen Golf', url: 'https://i.imgur.com/B5qn3eL.jpg' },
+  { nome: 'Wolkswagen Golf', url: 'https://i.imgur.com/B5qn3eL.jpg' },
   { nome: 'Nissan Altima', url: 'https://i.imgur.com/sexRJYz.jpg' },
   { nome: 'Hyundai Sonata', url: 'https://i.imgur.com/osT8Ihd.jpg' },
   { nome: 'Kia Optima', url: 'https://i.imgur.com/j1I233U.jpg' },
