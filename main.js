@@ -50,7 +50,7 @@ let tentativasRestantes = 5;
 let pontos = 0;
 let nomeParcial = '';
 
-const inputNome = document.getElementById('inputNome');
+const inputNome = document.getElementById('input-name');
 const erroElement = document.getElementById('erro');
 const score = document.getElementById('scoreBox');
 const dicaElement = document.getElementById('dica');

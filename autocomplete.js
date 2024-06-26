@@ -43,12 +43,12 @@ let possibleCars = [
 ];
 
 const autoComplete = document.querySelector(".auto-complete");
-const inputName = document.getElementById(".input-name");
+const inputName = document.getElementById("input-name");
 
 inputName.onkeyup = function() {
     let result = [];
-    let input = playerInput.value;
-    if(input.lenth) {
+    let input = inputName.value;
+    if(input.length) {
         result = possibleCars.filter((keyword)=>{
             return keyword.toLowerCase().includes(input.toLowerCase());
         });
@@ -57,7 +57,7 @@ inputName.onkeyup = function() {
     display(result);
 
     if(!result.length){
-        resultsBox.innerHTML('');
+        resultsBox.innerHTML= '';
     }
 }
 
@@ -71,5 +71,7 @@ function display(result){
 
 function selectInput(list) {
     inputName.value = list.innerHTML;
-    resultsBox.innerHTML = ('');
+    resultsBox.innerHTML = '';
 }
+
+window.selectInput = selectInput;

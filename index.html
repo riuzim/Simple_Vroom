@@ -1,113 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Vroom</title>
-  </head>
-  <body>
-    <div class="settingsMenu" id="settingsMenu">
-      <div class="settings">
-        <span class="close" id="close">x</span>
-        <div class="settingsContent">
-          <p class="settingsTitle">Configurações</p>
-          <div class="feedback">
-            Feedback
-            <p class="email">Email</p>
-          </div>
-          <div class="feedback">
-            Reporte um bug
-            <p class="email">Email</p>
-          </div>
-          <div class="feedback linkFeed">
-            Outros projetos:
-            <a href="" class="link">Portfolio</a>
-            <a href="" class="link">link2</a>
-            <a href="" class="link">link3</a>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Vroom</title>
+</head>
+
+<body>
+  <div class="settingsMenu" id="settingsMenu">
+    <div class="settings">
+      <span class="close" id="close">x</span>
+      <div class="settingsContent">
+        <p class="settingsTitle">Configurações</p>
+        <div class="feedback">
+          Feedback
+          <p class="email">Email</p>
+        </div>
+        <div class="feedback">
+          Reporte um bug
+          <p class="email">Email</p>
+        </div>
+        <div class="feedback linkFeed">
+          Outros projetos:
+          <a href="" class="link">Portfolio</a>
+          <a href="" class="link">link2</a>
+          <a href="" class="link">link3</a>
         </div>
       </div>
     </div>
-    <header>
-      <nav>
-        <a class="logo" title="Clique para abrir as configurações">Vroom</a>
+  </div>
+  <header>
+    <nav>
+      <a class="logo" title="Clique para abrir as configurações">Vroom</a>
 
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list-normal">
-          <li><a class="fa-brands fa-discord icon fa-2x" href="https://discord.gg/JTDE5eMv" target="_blank"> </a></li>
-          <li>
-            <a
-              href="https://github.com/iiai22/Simple_Vroom"
-              target="_blank"
-              class="fa-brands fa-github icon fa-2x"
-            ></a>
-          </li>
-          <!--
-          <li>
-            <a href="#" class="fa-solid fa-gear icon settingsBtn fa-2x"></a>
-          </li>
-          -->
-        </ul>
-      </nav>
-    </header>
-
-    <div class="grid">
-      <ul class="nav-list">
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list-normal">
         <li><a class="fa-brands fa-discord icon fa-2x" href="https://discord.gg/JTDE5eMv" target="_blank"> </a></li>
         <li>
-          <a
-            href="https://github.com/iiai22/Simple_Vroom"
-            target="_blank"
-            class="fa-brands fa-github icon fa-2x"
-          ></a>
+          <a href="https://github.com/iiai22/Simple_Vroom" target="_blank" class="fa-brands fa-github icon fa-2x"></a>
         </li>
         <!--
           <li>
             <a href="#" class="fa-solid fa-gear icon settingsBtn fa-2x"></a>
           </li>
           -->
-        <li>
-          <div class="data-container-l-mobile">
-            Best Score:
-            <ul class="data-containerCont"></ul>
-          </div>
-        </li>
-
-        <li>
-          <div class="data-container-r-mobile">
-            Last Score:
-            <ul class="data-containerCont"></ul>
-          </div>
-        </li>
       </ul>
-      <div class="data-container-l grid-row-span-2">
-        Best Score:
-        <ul></ul>
+    </nav>
+  </header>
+
+  <div class="grid">
+    <ul class="nav-list">
+      <li><a class="fa-brands fa-discord icon fa-2x" href="https://discord.gg/JTDE5eMv" target="_blank"> </a></li>
+      <li>
+        <a href="https://github.com/iiai22/Simple_Vroom" target="_blank" class="fa-brands fa-github icon fa-2x"></a>
+      </li>
+      <!--
+          <li>
+            <a href="#" class="fa-solid fa-gear icon settingsBtn fa-2x"></a>
+          </li>
+          -->
+      <li>
+        <div class="data-container-l-mobile">
+          Best Score:
+          <ul class="data-containerCont"></ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="data-container-r-mobile">
+          Last Score:
+          <ul class="data-containerCont"></ul>
+        </div>
+      </li>
+    </ul>
+    <div class="data-container-l grid-row-span-2">
+      Best Score:
+      <ul></ul>
+    </div>
+    <div id="contagem">
+      <div id="scoreBox">Score: 0</div>
+    </div>
+    <div id="container"></div>
+    <div class="player-input">
+      <div class="player-input-row">
+        <input type="text" id="input-name" placeholder="Digite o nome do carro" autocomplete="off" />
       </div>
-      
-      <div id="contagem"><div id="scoreBox">Score: 0</div></div>
-      <div id="container"></div>
-      <input type="text" id="inputNome" placeholder="Digite o nome do carro" />
-      <p id="erro"></p>
-      <p id="dicaBox"></p>
-      <div class="data-container-r grid-row-span-2">
-        Last Score:
-        <ul></ul>
+      <div class="auto-complete" id="resultsBox">
       </div>
     </div>
-    <script type="module" src="main.js"></script>
-    <script
-      src="https://kit.fontawesome.com/9914bd8223.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="autocomplete.js"></script>
-    <script type="module" src="mobile-navbar.js"></script>
-    <script type="module" src="settingMenu.js"></script>
-    <script type="module" src="sendEmail.js"></script>
-  </body>
+    <p id="erro"></p>
+    <p id="dicaBox"></p>
+    <div class="data-container-r grid-row-span-2">
+      Last Score:
+      <ul></ul>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+  <script src="https://kit.fontawesome.com/9914bd8223.js" crossorigin="anonymous"></script>
+  <script type="module" src="mobile-navbar.js"></script>
+  <script type="module" src="settingMenu.js"></script>
+  <script type="module" src="sendEmail.js"></script>
+  <script type="module" src="autocomplete.js"></script>
+</body>
+
 </html>
