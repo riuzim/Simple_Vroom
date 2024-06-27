@@ -1,6 +1,6 @@
 // Array de imagens com nomes associados
 const imagens = [
-  { nome: 'BMW XM ', url: 'https://i.imgur.com/QOyhDrc.jpg' },
+  { nome: 'BMW XM', url: 'https://i.imgur.com/QOyhDrc.jpg' },
   { nome: 'Mercedes GTR', url: 'https://i.imgur.com/1EKcZtW.jpg' },
   { nome: 'Porsche 911', url: 'https://i.imgur.com/ckbtkUK.jpg' },
   { nome: 'PORSCHE 911 GT3RS', url: 'https://i.imgur.com/K62jye3.jpg' },
