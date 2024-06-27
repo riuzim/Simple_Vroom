@@ -60,9 +60,10 @@
   background-color: #1e1e1f;
   color: white;
   height: 40%;
+  position: relative;
 
-  grid-column: 3;
-  grid-row: 4;
+  /*grid-column: 3;
+  grid-row: 4;*/
 }
 
 #inputNome::placeholder {
@@ -520,12 +521,16 @@ nav {
 .player-input {
   grid-row: 4;
   grid-column: 3;
+
 }
 
 .auto-complete ul {
   border-top: 1px solid #121213;
   max-height: 200px;
   overflow-y: scroll;
+  position: absolute;
+  min-width: 400px;
+  max-width: 400px;
 }
 
 .auto-complete ul li {
