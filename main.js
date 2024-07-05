@@ -51,7 +51,6 @@ let pontos = 0;
 let nomeParcial = '';
 
 
-const scoreMade = document.querySelector('.lastScoreList')
 const scoreBox = document.getElementById('scoreBox');
 const lastScoreBox = document.getElementById('lastScoreDiv');
 const bestScoreBox = document.getElementById('bestScoreDiv');
@@ -157,18 +156,20 @@ function sleep(ms) {
 }
 
 //seta as cores para verde quando acerta o carro
-async function winColors(item) {
-  item.style.backgroundColor = '#00FF00';
+async function piscaVerde(item) {
   item.style.boxShadow = '0 0 15px #00FF00';
-  if (item != scoreBox) {
-    item.style.borderColor = 'RGB(0,255,0)';
+  //item.style.backgroundColor = '#00FF00';
+
+
+  if (item == scoreBox) {
+    item.style.backgroundColor = '#00FF00';
   }
 
   await sleep(1000);
   if (item != scoreBox) {
-    item.style.backgroundColor = '#1e1e1f';
     item.style.boxShadow = '';
     item.style.borderColor = '#1e1e1f';
+    item.style.backgroundColor = '#1e1e1f';
   }
   else {
     item.style.background = '#f9b17a';
@@ -177,16 +178,16 @@ async function winColors(item) {
 }
 
 //roda quando ganha ponto e roda dependencias
-function scoredPoint() {
+function fezPonto() {
   dicaBox.textContent = '';
   dicaBox.style.display = '';
   erroElement.textContent = '';
 
   container.querySelector('img').style.filter = 'blur(0px)';
 
-  winColors(scoreBox);
-  winColors(lastScoreBox);
-  winColors(bestScoreBox);
+  piscaVerde(scoreBox);
+  piscaVerde(lastScoreBox);
+  piscaVerde(bestScoreBox);
 
 
   console.log('pontuou');
@@ -197,7 +198,7 @@ async function verificarResposta() {
   if (inputNome.value.trim().toLowerCase() === imagemAtual.nome.toLowerCase()) {
     inputNome.value = '';
     pontos++;
-    scoredPoint();
+    fezPonto();
     await sleep(2000);
     atualizarPontuacao();
     console.log(pontos)

@@ -29,7 +29,7 @@ let possibleCars = [
     'McLaren P1',
     'Toyota Sprinter Trueno',
     'Toyota Supra',
-    'Mitsubishi Ecplise',
+    'Mitsubishi Eclipse',
     'Mitsubishi Lancer',
     'Audi R8',
     'Fiat Uno',
@@ -52,7 +52,6 @@ inputName.onkeyup = function() {
         result = possibleCars.filter((keyword)=>{
             return keyword.toLowerCase().includes(input.toLowerCase());
         });
-        console.log(result);
     }
     display(result);
 
