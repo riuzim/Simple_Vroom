@@ -61,8 +61,8 @@
   color: white;
   height: 40%;
 
-  grid-column: 3;
-  grid-row: 4;
+  /*grid-column: 3;
+  grid-row: 4;*/
 }
 
 #inputNome::placeholder {
