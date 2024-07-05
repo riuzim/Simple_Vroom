@@ -60,7 +60,8 @@
   background-color: #1e1e1f;
   color: white;
   height: 40%;
-
+  
+  position: relative;
   /*grid-column: 3;
   grid-row: 4;*/
 }
@@ -530,6 +531,10 @@ nav {
 }
 
 .auto-complete ul {
+  position: absolute;
+  min-width: 400px;
+  max-width: 400px;
+  
   border-top: 1px solid #121213;
   max-height: 200px;
   overflow-y: scroll;
