@@ -1,3 +1,13 @@
-# Simple_Vroom
 
-Just click on the website and play!
+# Vroom
+
+Just click and play!
+
+## How to play
+
+Go to this [website](https://iiai22.github.io/Simple_Vroom/) and try to guess the car.
+## Authors
+
+- [@iaii22](https://github.com/iiai22)
+- [@K00NG](https://github.com/K00NG)
+
