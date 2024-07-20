@@ -158,8 +158,6 @@ function sleep(ms) {
 //seta as cores para verde quando acerta o carro
 async function piscaVerde(item) {
   item.style.boxShadow = '0 0 15px #00FF00';
-  //item.style.backgroundColor = '#00FF00';
-
 
   if (item == scoreBox) {
     item.style.backgroundColor = '#00FF00';
@@ -173,6 +171,26 @@ async function piscaVerde(item) {
   }
   else {
     item.style.background = '#f9b17a';
+    item.style.boxShadow = '0 0 15px #f9b17a';
+  }
+}
+
+//seta cores para vermelho quando erra o carro
+async function piscaVermelho(item) {
+  item.style.boxShadow = '0 0 15px #FF0000';
+
+  if(item == scoreBox) {
+    item.style.backgroundColor = '#FF0000'
+  }
+
+  await sleep(1000);
+  if(item != scoreBox) {
+    item.style.boxShadow = '';
+    item.style.borderColor = '#1e1e1f';
+    item.style.backgroundColor = '#1e1e1f';
+  }
+  else {
+    item.style.backgroundColor = '#f9b17a';
     item.style.boxShadow = '0 0 15px #f9b17a';
   }
 }
@@ -205,6 +223,9 @@ async function verificarResposta() {
     exibirImagemAleatoria();
   } else {
     blurValue -= reducaoBlur;
+    piscaVermelho(scoreBox);
+    piscaVermelho(lastScoreBox);
+    piscaVermelho(bestScoreBox);
     if (blurValue < 0) {
       blurValue = 0;
     }
