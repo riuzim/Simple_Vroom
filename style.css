@@ -557,3 +557,19 @@ nav {
 #scoreMade {
   background-color: #1e1e1f;
 }
+
+/*Modo hard*/
+
+#hardmode {
+  padding: 5px;
+  background-color: #1e1e1f;
+  color: #fff;
+  border-radius: 20px;
+  border: #fff solid 1px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#hardmode:hover {
+  letter-spacing: 0.5px;
+}

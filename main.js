@@ -298,6 +298,27 @@ inputNome.addEventListener('keyup', function (event) {
   }
 });
 
+var hardIsOn = false
+var hardButton = document.getElementById("hardmode");
+
+hardButton.addEventListener("click", hardOnOff);
+
+function hardOnOff() {
+  if (hardIsOn != true) {
+    hardButton.style.color = "#1e1e1f"
+    hardButton.style.backgroundColor = "#f9b17a"
+    hardButton.style.border = "#1e1e1f solid 1px"
+    hardIsOn = true
+    console.log("Modo hard ligado")
+  } else 
+  {
+    hardButton.style.color = "#fff"
+    hardButton.style.backgroundColor = "#1e1e1f"
+    hardButton.style.border = "#fff solid 1px"
+    hardIsOn = false
+    console.log("Modo hard desligado")
+  }
+};
 
 
 
