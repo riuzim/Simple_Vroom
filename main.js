@@ -49,8 +49,9 @@ const reducaoBlur = 4;
 let tentativasRestantes = 5;
 let pontos = 0;
 let nomeParcial = '';
+let modoHard = false;
 
-
+const container = document.getElementById('container');
 const scoreBox = document.getElementById('scoreBox');
 const lastScoreBox = document.getElementById('lastScoreDiv');
 const bestScoreBox = document.getElementById('bestScoreDiv');
@@ -132,7 +133,12 @@ function exibirImagemAleatoria() {
   imgElement.style.maxHeight = '100%';
   imgElement.style.objectFit = 'contain';
   imgElement.style.backgroundColor = '#2d3250;';
-  imgElement.style.filter = `blur(${blurValue}px)`;
+  if (modoHard) {
+    imgElement.style.filter = `blur(${blurValue}px) grayscale(100%)`;
+  }
+  else {
+    imgElement.style.filter = `blur(${blurValue}px)`;
+  }
 
   container.appendChild(imgElement);
 
@@ -142,7 +148,12 @@ function exibirImagemAleatoria() {
   dicaBox.style.display = 'none';
 
   blurValue = 15;
-  imgElement.style.filter = `blur(${blurValue}px)`;
+  if (modoHard) {
+    imgElement.style.filter = `blur(${blurValue}px) grayscale(100%)`;
+  }
+  else {
+    imgElement.style.filter = `blur(${blurValue}px)`;
+  }
 
   tentativasRestantes = 5;
 
@@ -232,13 +243,18 @@ async function verificarResposta() {
 
     const container = document.getElementById('container');
     const imgElement = container.querySelector('img');
-    imgElement.style.filter = `blur(${blurValue}px)`;
-
+    if (modoHard) {
+      imgElement.style.filter = `blur(${blurValue}px) grayscale(100%)`;
+    }
+    else {
+      imgElement.style.filter = `blur(${blurValue}px)`;
+    }
     tentativasRestantes--;
 
     if (tentativasRestantes === 0) {
       exibirMensagemPerdeu();
-    } else {
+    } 
+    else {
       const nome = imagemAtual.nome;
       let letrasDisponiveis = getLetrasDisponiveis(nome, nomeParcial);
       let letraDica =
@@ -298,24 +314,27 @@ inputNome.addEventListener('keyup', function (event) {
   }
 });
 
-var hardIsOn = false
 var hardButton = document.getElementById("hardmode");
 
-hardButton.addEventListener("click", hardOnOff);
+hardButton.addEventListener("click", trocaModo);
 
-function hardOnOff() {
-  if (hardIsOn != true) {
+function trocaModo() {
+const imgElement = container.querySelector('img')
+  if (modoHard != true) {
     hardButton.style.color = "#1e1e1f"
     hardButton.style.backgroundColor = "#f9b17a"
     hardButton.style.border = "#1e1e1f solid 1px"
-    hardIsOn = true
+    imgElement.style.filter = `blur(${blurValue}px) grayscale(100%)`;
+    modoHard = true
+    
     console.log("Modo hard ligado")
   } else 
   {
     hardButton.style.color = "#fff"
     hardButton.style.backgroundColor = "#1e1e1f"
     hardButton.style.border = "#fff solid 1px"
-    hardIsOn = false
+    imgElement.style.filter = `blur(${blurValue}px)`;
+    modoHard = false
     console.log("Modo hard desligado")
   }
 };
