@@ -129,11 +129,11 @@ function exibirImagemAleatoria() {
 
   const imgElement = document.createElement('img');
   imgElement.src = novaImagem.url;
-  imgElement.setAttribute('draggable', false);
   imgElement.style.maxWidth = '100%';
   imgElement.style.maxHeight = '100%';
   imgElement.style.objectFit = 'contain';
   imgElement.style.backgroundColor = '#2d3250;';
+  imgElement.setAttribute('draggable', false);
   if (modoHard) {
     imgElement.style.filter = `blur(${blurValue}px) grayscale(100%)`;
   }
