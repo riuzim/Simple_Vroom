@@ -297,7 +297,10 @@ function getDicaFormatada(nomeCompleto, nomeParcial) {
 }
 
 // Exibir a mensagem de perda e reiniciar o jogo
-function exibirMensagemPerdeu() {
+async function exibirMensagemPerdeu() {
+  const imgElement = container.querySelector('img');
+  imgElement.style.filter = `blur(0px)`;
+  await sleep(500);
   scores.push(pontos);
   localStorage.setItem('scores', JSON.stringify(scores));
   pontos = 0;
@@ -324,7 +327,8 @@ const imgElement = container.querySelector('img')
   if (modoHard != true) {
     hardButton.style.color = "#1e1e1f"
     hardButton.style.backgroundColor = "#f9b17a"
-    hardButton.style.border = "#1e1e1f solid 1px"
+    hardButton.style.border = "#f9b17a solid 1px"
+    hardButton.style.boxShadow = "0 0 15px #f9b17a"
     imgElement.style.filter = `blur(${blurValue}px) grayscale(100%)`;
     modoHard = true
     
@@ -334,6 +338,7 @@ const imgElement = container.querySelector('img')
     hardButton.style.color = "#fff"
     hardButton.style.backgroundColor = "#1e1e1f"
     hardButton.style.border = "#fff solid 1px"
+    hardButton.style.boxShadow = "0 0 0px"
     imgElement.style.filter = `blur(${blurValue}px)`;
     modoHard = false
     console.log("Modo hard desligado")
