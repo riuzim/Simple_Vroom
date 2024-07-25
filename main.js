@@ -129,6 +129,7 @@ function exibirImagemAleatoria() {
 
   const imgElement = document.createElement('img');
   imgElement.src = novaImagem.url;
+  imgElement.setAttribute('draggable', false);
   imgElement.style.maxWidth = '100%';
   imgElement.style.maxHeight = '100%';
   imgElement.style.objectFit = 'contain';
