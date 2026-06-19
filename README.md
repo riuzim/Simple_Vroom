@@ -1,13 +1,14 @@
-
 # Vroom
 
-Just click and play!
+Jogo de adivinhação de carros modernizado com React, Vite e Tailwind CSS.
 
-## How to play
+## Como rodar
 
-Go to this [website](https://riuzim.github.io/Vroom/) and try to guess the car.
-## Authors
+```bash
+npm install
+npm run dev
+```
 
-- [@iaii22](https://github.com/iiai22)
-- [@K00NG](https://github.com/K00NG)
+## Como jogar
 
+Digite o nome do carro exibido. A cada erro, a imagem fica menos borrada e uma dica revela novas letras. O Hard Mode deixa a imagem em preto e branco.
